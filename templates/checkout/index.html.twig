@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Car2Go - Checkout</title>
+    <link rel="stylesheet" href="{{asset('./Shop.css')}}">
+    <link rel="stylesheet" href="{{asset('./Checkout.css')}}">
+ </head>   
+
+ <body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-element logo">
+            <img src="{{asset('./images/Logo.png')}}" alt=""> 
+            </div>
+                <a href="{{path('home')}}" class="nav-element">HOME</a>
+                <a href="{{path('contact')}}" class="nav-element">CONTACT</a>
+                {% if app.user %}
+                <a href="{{path('app_logout')}}" class="nav-element">LOGOUT</a>
+                <a href="{{path('car')}}" class="nav-element shop-button">Shop Now</a>
+                {% else %}
+                <a href="{{path('app_login')}}" class="nav-element">LOGIN</a>
+                <a href="{{path('register')}}" class="nav-element shop-button">Register Now</a>
+                {% endif %}             
+        </div>
+    </nav>
+    <h1 class="HeadLine-Shop-Page">
+        Order Summary
+    </h1>
+    <div class="detail-grid">
+        <div class="car_img">
+            <img src="{{car.picture.url}}" alt="">
+        </div>
+        <div class="car-content">
+            <div class="car-header">
+                <h1 class="car-text">{{car.marque}}, {{car.name}}</h1>            
+            </div>
+            <p class="car-description">{{car.shortDesc}}</p>
+            
+            <div class="car-footer">
+                <span class="car-price">Subtotal Inc VAT: £{{car.prix}}</span>
+                <button class="Buy-button-remove"> Remove </button>
+                <button class="Buy-button-details">Buy Now</button>           
+            </div>
+        </div>
+    </div>
+
+ </body>
+
+</html>
