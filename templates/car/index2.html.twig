@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Shop{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+{% endblock %}
+{% block body %}
+{% include 'shared/navbar.html.twig' %}
+<div class="wrapper-grid">
+
+    {% for i in cars %}
+    <div class="container">
+        <div class="img-container">
+            <div class='banner-img' style="background-image: url({{i.picture.url}});"></div>
+        </div>
+      
+     <div class="context-card">
+        <h1 class="name">{{i.marque}}, {{i.name}}</h1>
+        <span class="price"> £{{i.prix}}</span>
+     </div>
+        <div class="card-footer">
+            <a href="{{path('details', {'id': i.id})}}" class="details">View details</a>
+            <button class=" Buy-button">Buy Now</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% do cars.setPageRange(2) %}
+{{ knp_pagination_render(cars, 'shared/pagination.html.twig') }}
+{% endblock %}

@@ -1,0 +1,25 @@
+<nav class="nav">
+            <label>
+                <input type='checkbox' class='checkbox'>
+                <span class='menu'> <span class='hamburger'></span> </span>
+                <ul class="ul-ham" style="color: black;">
+                    <li><a onclick="document.getElementsByClassName('checkbox')[0].checked = false" href="#">ACCUEIL</a></li>
+                    <li><a onclick="document.getElementsByClassName('checkbox')[0].checked = false" href="#services">SERVICES</a></li>
+                    <li><a onclick="document.getElementsByClassName('checkbox')[0].checked = false" href="#apropos"> À PROPOS</a></li>
+                    <li><a onclick="document.getElementsByClassName('checkbox')[0].checked = false" href="#ecrivez-nous">CONTACT</a></li>
+                    <button class="shop-button">Shop Now</button>
+                </ul>
+            </label>
+        <div>
+            <img src="img/logo.png" height="70%" alt="Logo" id="logo" class="logo">
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a class="menu active" href="#">ACCUEIL</a></li>
+                <li><a class="menu" href="#services">SERVICES</a></li>
+                <li><a class="menu" href="#apropos"> À PROPOS</a></li>
+                <li><a class="menu" href="#ecrivez-nous">CONTACTEZ-NOUS</a></li>
+            </ul>
+            <button class="shop-button">Shop Now</button>
+        </div>
+    </nav>

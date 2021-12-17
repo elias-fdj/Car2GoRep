@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Desktop Responsive */
+nav
+{
+  
+    background-color: black;
+   
+}
+.nav-container
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 88px;
+    
+    
+}
+.search-input
+{
+    width: 265px;
+    height: 48px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    
+}
+.HeadLine-Shop-Page
+{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 84px;
+    margin-left: 56px;
+    margin-top: 48px;
+}
+.search-input::placeholder
+{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: #999999;
+    
+}
+.search-container
+
+{
+    margin-left: 40px;
+   
+}
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img
+{
+    width: 115px;
+    height: 41px;
+    
+    
+}
+
+.nav-element
+{
+    text-decoration: none;
+    margin-right: 56px;
+}
+.nav-element:first-child {
+    margin-right: auto;
+    margin-left: 4%;
+  }
+
+  .shop-button
+  {
+    width: 154px;
+    height: 48px;
+    background: #F8CD57;
+    border: none;
+    margin-right: 4%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+  }
+.nav-container a{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    color: white;
+ } 
+
+ .wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 20.813rem);
+    justify-content: center;
+    margin-top: 32px;
+  }
+  
+  .container {
+    overflow: hidden;
+    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+    text-align: center;
+    margin: 0.5rem;
+    background: #F7F7F7;
+  }
+  .img-container
+  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 32px;
+  }
+  .banner-img {
+    
+    
+    height: 10.75rem;
+    width: 269px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  
+  .name {
+      margin-top: 5px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    margin-right: 158px;
+    
+    
+  }
+
+  .context-card
+  {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+  }
+  
+  .price {
+    margin-right: 200px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #404040;
+    margin-top: 8px;
+    
+  }
+  
+  .btn {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    padding: 1rem;
+    background-color: var(--clr-primary);
+  }
+  .card-footer
+  {
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      
+  }
+  .details
+  
+  {
+      margin-left: 32px;
+      margin-top: 31px;
+      font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 27px;
+    
+    color: #404040;
+    margin-bottom: 37px;
+    
+  }
+  .Buy-button
+  {
+    width: 124px;
+    height: 40px;
+    background: #F8CD57;
+    border: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    margin-left: 62px;
+    margin-right: 32px;
+    flex: 1;
+    
+  }

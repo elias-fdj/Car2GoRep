@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+{% block stylesheets %}
+<link rel="stylesheet" href="./Home.css">
+<link rel="stylesheet" href="./global.css">
+{% endblock %}
+{% block body %}
+{% include 'shared/navbar.html.twig' %}
+<section class="home">
+    <div class="text-home">
+        <h1>
+            Ride your dream car<br>
+            at a lowest price* 
+        </h1>
+    </div>
+    <div class="search-container">
+        <input type="search" class="search-input" placeholder="What car are you looking for?">
+        <button class="search-btn">Search</button>
+    </div>
+   
+</section>
+
+<section class="offers">
+    <div class="title-offers">
+        <h1 class="offers-title">
+            What we offer you
+        </h1>
+    </div>
+
+</section>
+
+<section class="new-elements">
+  
+</section>
+
+<footer>
+
+</footer>
+{% endblock %}
