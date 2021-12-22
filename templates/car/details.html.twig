@@ -3,27 +3,159 @@
 {% block stylesheets %}
 <link rel="stylesheet" href="{{asset('./Shop.css')}}">
 <link rel="stylesheet" href="{{asset('./Car_Details.css')}}">
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="assets/css/fontawesome.css">
+<link rel="stylesheet" href="{{asset('./assets/fontawesome.css')}}">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Car2Go - Home</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    
+
+  </head>
+
 {% endblock %}
 {% block title %}{{car.name}}{% endblock %}
 
 {% block body %}
+
 <nav>
     <div class="nav-container">
-        <div class="nav-element logo">
-           <img src="{{asset('./images/Logo.png')}}" alt=""> 
+        <div class=" logo">
+            <a class="navbar-brand" href="{{path('home')}} " id="log" >Car<span style="color: #F8CD57;">2</span>go</a>
         </div>
-            <a href="{{path('home')}}" class="nav-element">HOME</a>
-            <a href="{{path('contact')}}" class="nav-element">CONTACT</a>
+
+        <div class="else">
+            <a href="{{path('home')}}" class="" id="st">Home</a>
+            <a href="{{path('contact')}}" class="nav-element">Contact Us</a>
             {% if app.user %}
-            <a href="{{path('app_logout')}}" class="nav-element">LOGOUT</a>
+            <a href="{{path('app_logout')}}" class="nav-element">Log Out</a>
             <a href="{{path('car')}}" class="nav-element shop-button">Shop Now</a>
             {% else %}
             <a href="{{path('app_login')}}" class="nav-element">LOGIN</a>
             <a href="{{path('register')}}" class="nav-element shop-button">Register Now</a>
             {% endif %}
             
+        </div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
     </div>
 </nav>
+<style>
+    body{
+        font-style: Futura PT;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .car-footer{
+        margin-top: 15%;
+    }
+    .back-link {
+        margin-right: 250px;
+    }
+    .nav-element:first-child {
+    margin-left: 0;
+}
+.nav-container{
+    width: 100%;
+    justify-content: space-between;
+    height: 80px;
+}
+.else{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content:right;
+}
+.logo{
+    /* margin-right:50% ; */
+    margin-left: 0.7%;
+}
+#log{
+    text-decoration: none;
+    /* margin-left: -50%; */
+    margin-right: auto;
+    outline: none;
+    font-family: Futura PT;
+    color: white;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    font-weight: 800;
+}
+#log span{
+    font-size: 36px;
+    font-family: Futura PT;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    font-weight: 800;
+    margin-left: 0;
+}
+.nav-element{
+    margin-right: 1%;
+}
+#st{
+    margin: 0;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+    transition: all 0.5s;
+    margin-top: 5px;
+    width: fit-content ;
+    margin-right: 7%;
+
+
+}
+
+    .nav-container a{
+        width: fit-content ;
+        margin-right: 7%;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #fff;
+    transition: all 0.5s;
+    margin-top: 5px;
+    }
+    .shop-button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.25rem;
+        height: 50%;
+        width: 15% !important;
+        background-color: #ffc107;
+        color: #212529 !important;
+        margin-right: 5%;
+        margin-bottom: 1%;
+        
+    }
+    .detail-grid{
+        width: 100%;
+    }
+</style>
 
 <div class="detail-grid">
         <div class="car_img">
@@ -87,15 +219,52 @@
             </div>
             <div class="car-footer">
                 
-           <div class="back-link-flex">
+           <div class="back-link-flex" style="margin-left: 3%;">
             <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96616 2.25005L3.21616 9.00005L9.96616 15.75L8.37517 17.341L0.0341797 9.00005L8.37517 0.659058L9.96616 2.25005Z" fill="#0C0C0C"/>
                 </svg>
     
-                <a href="{{path('car')}}" class="back-link"> Go back</a>
+                <a href="{{path('car')}}" class="back-link" style="margin-right: 200px;"> Go back</a>
            </div>
                 <button class="Buy-button-details">Buy Now</button>
             </div>
         </div>
     </div>
+    <nav>
+        <div class="nav-container" style="margin-top: 10%;">
+            <style>
+                
+            </style>
+            <div class=" logo" style="align-items: center; height: 100%; width: 28%;">
+                <a class="navbar-brand" href="{{path('home')}} " id="log" style="margin-top: 0;" >Car<span style="color: #F8CD57;">2</span>go</a>
+                <p style="color: white; width: max-content;margin: 0;">© 2021 - Car2go, All rights reserved.</p>
+            </div>
+    
+            <div class="else">
+                <a href="{{path('home')}}" class="" id="st"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="white"/>
+                    <path d="M34.6297 13.3086C31.809 10.4849 28.0586 8.92937 24.0626 8.92749C15.8299 8.92749 9.12787 15.628 9.12525 23.8641C9.12375 26.4974 9.81187 29.0672 11.1187 31.3315L9 39.0722L16.9181 36.9955C19.1003 38.1846 21.5565 38.812 24.0566 38.8131H24.063C32.2957 38.8131 38.9966 32.1115 39 23.8757C39.0019 19.885 37.449 16.132 34.6297 13.3086ZM24.063 36.2901H24.0581C21.8295 36.2894 19.6447 35.6909 17.7382 34.5599L17.2849 34.2906L12.5861 35.5232L13.8397 30.9422L13.5446 30.4712C12.3015 28.495 11.6449 26.2109 11.6464 23.8641C11.6486 17.0192 17.2185 11.4501 24.0668 11.4501C27.3833 11.4509 30.4999 12.7442 32.8444 15.0914C35.1885 17.4381 36.4785 20.557 36.4778 23.8746C36.4755 30.7206 30.9056 36.2901 24.063 36.2901ZM30.873 26.992C30.4995 26.8049 28.6646 25.903 28.3223 25.7774C27.9799 25.6529 27.732 25.591 27.483 25.9645C27.234 26.338 26.5189 27.1791 26.3006 27.4281C26.0831 27.6771 25.8656 27.7086 25.4921 27.5215C25.1186 27.3344 23.9164 26.9406 22.4918 25.6686C21.3818 24.6797 20.6325 23.4565 20.415 23.083C20.1975 22.7095 20.3917 22.5081 20.5789 22.3217C20.7469 22.1545 20.9524 21.886 21.1388 21.6677C21.3251 21.4495 21.3874 21.2939 21.5119 21.0452C21.6364 20.7962 21.5745 20.5784 21.4808 20.3916C21.387 20.2045 20.6407 18.3674 20.3302 17.62C20.0269 16.8921 19.7194 16.9907 19.4906 16.9795C19.2724 16.969 19.0238 16.966 18.7751 16.966C18.5265 16.966 18.1219 17.0594 17.7799 17.4332C17.4382 17.8067 16.4738 18.7094 16.4738 20.5472C16.4738 22.384 17.811 24.1592 17.9977 24.4079C18.1845 24.6565 20.6295 28.4271 24.3735 30.0437C25.2638 30.4277 25.9594 30.6576 26.5012 30.8301C27.3952 31.1147 28.209 31.0739 28.8525 30.9779C29.5695 30.871 31.0605 30.0752 31.3721 29.2034C31.683 28.3319 31.683 27.5849 31.5889 27.4289C31.4947 27.2725 31.2458 27.1791 30.873 26.992Z" fill="#0C0C0C"/>
+                    </svg>
+                    
+                    </a>
+                <a href="{{path('contact')}}" class="nav-element"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="white"/>
+                    <path d="M30.0336 24.9395H25.7511V40.6286H19.2628V24.9395H16.1769V19.4257H19.2628V15.8576C19.2628 13.3061 20.4748 9.31067 25.8089 9.31067L30.615 9.33078V14.6828H27.1279C26.5559 14.6828 25.7516 14.9686 25.7516 16.1858V19.4308H30.6005L30.0336 24.9395Z" fill="#0C0C0C"/>
+                    </svg>
+                    </a>
+                <a href="{{path('app_logout')}}" class="nav-element"><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="24" fill="#0C0C0C"/>
+                    <path d="M31.1532 12.7704H16.847C14.5635 12.7704 12.7057 14.6282 12.7057 16.9117V31.2178C12.7057 33.5013 14.5635 35.3597 16.847 35.3597H31.1532C33.4366 35.3597 35.295 33.5019 35.295 31.2178V16.9117C35.295 14.6282 33.4372 12.7704 31.1532 12.7704ZM24.0001 31.5013C19.9 31.5013 16.5641 28.1654 16.5641 24.0648C16.5641 19.9647 19.9 16.6288 24.0001 16.6288C28.1007 16.6288 31.4366 19.9647 31.4366 24.0648C31.4366 28.1648 28.1002 31.5013 24.0001 31.5013ZM31.6756 18.1662C30.705 18.1662 29.9157 17.3769 29.9157 16.4068C29.9157 15.4368 30.705 14.6474 31.6756 14.6474C32.6457 14.6474 33.435 15.4368 33.435 16.4068C33.435 17.3769 32.6457 18.1662 31.6756 18.1662Z" fill="white"/>
+                    <path d="M24 19.771C21.6331 19.771 19.7058 21.6972 19.7058 24.0641C19.7058 26.4321 21.6331 28.3589 24 28.3589C26.368 28.3589 28.2937 26.4321 28.2937 24.0641C28.2937 21.6978 26.3675 19.771 24 19.771Z" fill="white"/>
+                    <path d="M24 0C10.7457 0 0 10.7457 0 24C0 37.2543 10.7457 48 24 48C37.2543 48 48 37.2543 48 24C48 10.7457 37.2543 0 24 0ZM38.4367 31.2178C38.4367 35.2345 35.1698 38.5014 31.1531 38.5014H16.8469C12.8308 38.5014 9.56331 35.2345 9.56331 31.2178V16.9116C9.56331 12.8955 12.8308 9.62802 16.8469 9.62802H31.1531C35.1698 9.62802 38.4367 12.8955 38.4367 16.9116V31.2178Z" fill="white"/>
+                    </svg></a>
+
+                
+            </div>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    
+        </div>
+    </nav>
 {% endblock %}
+
+
