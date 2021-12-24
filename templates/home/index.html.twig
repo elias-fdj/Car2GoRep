@@ -34,11 +34,13 @@
         <div class="nope">
           <div class="first">
             <h1>Ride your dream car at a lowest price</h1>
+            <form method="post" action="{{path('search')}}">
             <div class="search">
-              <input type="text" placeholder="   What car are you looking for?">
+              <input type="text" name="search" placeholder="   What car are you looking for?">
 
               <button type="submit">search</button>
             </div>
+            </form>
           </div>
           <div class="secnd">
             <div class="elem">
